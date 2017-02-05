@@ -6,12 +6,62 @@
     <meta name="description" content="CRP">
     <meta name="author" content="Dmitry Zviagov">
     <title>Dmitry Zviagov: CRP task</title>
+      <style type="text/css">
+          html {
+              font-size: 100%;
+              overflow-y: scroll;
+              -webkit-tap-highlight-color: rgba(0,0,0,0);
+              -ms-text-size-adjust: 100%;
+              -webkit-text-size-adjust: none;
+              font-family: 'Open Sans', sans-serif; color: #333;
+          }
+          body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; background: #fff; }
+          a { color: #12C; }
+          a:visited { color: #61C; }
+          a:focus { outline: thin dotted; }
+          a:hover, a:active { color: #c00; outline: 0; }
+          b, strong { font-weight: bold; }
+          ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
+          header, footer, .container { max-width: 45em; margin: 0 auto; }
+          header { padding: 0 0.5em; color: #C90B0B; }
+          header img { border-radius: 40px; float: left; width: 70px;}
+          header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
+          header p span { font-size: 0.8em; font-weight: normal;}
+          .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
+              border-bottom: 1px solid #ccc;
+              border-top: 1px solid #ccc;
+          }
+          .content { padding: 1em 1em; }
+          .content li { list-style-type: none; font-size: 1.1em;}
+          li img {width: 100px; float:left; padding-right: 1em; }
+          li p { font-size: 0.9em; font-style: italic; }
+
+          footer {
+              padding: 0 0.5em;
+              border-top: 1px solid #ccc;
+          }
+          footer span { float: right; font-style: italic; }
+          @media only screen and (max-width: 480px) {
+              body { font-size: 12px;}
+              header p { padding-left: 4.5em;}
+          }
+      </style>
+      <style media="print">
+          * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
+          a, a:visited { color: #444 !important; text-decoration: underline; }
+          a[href]:after { content: " (" attr(href) ")"; }
+          tr, img { page-break-inside: avoid; }
+          img { max-width: 100% !important; }
+          @page { margin: 0.5cm; }
+          p, h2, h3 { orphans: 3; widows: 3; }
+          h2, h3{ page-break-after: avoid; }
+      </style>
   </head>
   <body>
     <header>
       <a href="/"><img rel="prefetch prerender" src="img/profilepic.jpg"></a>
       <p>Cameron Pittman<br><span>Course Developer</span></p>
-      <a href="/"><img rel="prefetch prerender" src="img/myphoto.jpg"></a>
+      <a href="/"><img rel="prefetch prerender" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCABqAGQDASIAAhEBAxEB/8QAHAAAAAcBAQAAAAAAAAAAAAAAAAIDBAUGBwEI/8QAPBAAAQMDAgQDBQQHCQAAAAAAAQACAwQFESExBhITYSJBUQcUMnGBUpGh0RUWM0JDscEjJDdTcnSCstL/xAAaAQACAwEBAAAAAAAAAAAAAAABAwACBAUG/8QAIREAAgICAwACAwAAAAAAAAAAAAECAxESBCExE0FRYcH/2gAMAwEAAhEDEQA/ANkB1RgdUnlGCqXFAe6GUTKBdooWD5wiumjaQ1z2gu2BO6yf2p+1I2eofabCYpKph5Zpz4hGfRuNCVi964nvl0n95rrhNNNsHk4cPuUIonr9lVTvmdCyaN0jd2BwJH0SwcvGNDd7lS1DayGrqo5WnmDw8g5+a2b2Ye1ptTUR2riWojaX+GKrOmHfZf2Pk770A4aNqyupJrgRpqlARhEAYoeS5nuggE4UEMoKEGWUbKTBXcq4sOToqZ7XOJpOHeF3upXtbWVTujAfNumXO+g/EhW9ztCsc9vjjPe7FSkAx9OR5J2+Jox+Cq/C8FlpFDs3B1fdYm1dQ7k6pyA7fHqVbrP7OqBviqQZH+vkFYbPh1NEWNGOUaKyUzJCzLRquTZfOT9PS0cWqMfCvfqraWQiP3ONzRp4hlVrifga1VdO4U0QpqkDLHt2z6Eei0tzHdLIaVBXKN/MTjZLhbOLymPsornHDQ09gfE1xnZVcJ3lxdU25oNM5w1MQOC0nzxkY7Hstba7TZYJw+99L7X7XUQ5aJy6KUD95pYd/uC3WN3hC7EJbRTPMXV/HNxHGV3KTyjZVhYZBFz3QQIR+V3KT5kOZNFhnu0WWe2un5qyxVfJkCd0J+uCB+BWnSO03Wd8atNRVVBme+SGKaJwadQwhwwQkXTUF2auLS7ZPD87K5fbpW0EvQpZmUrCQ0O5OZ7j5ABEsl5vfWL2XOuqGscY3slpg0BwGSPXIVqNupq1gdIxrnZ8whPbYKeAuEfKPhAG7uy5W6xjB6KNTymn0J8SXi4st1P7i8sdNGXF4bnl21x9VRTdrlDUnq3m5PeyXpvE8ADA77PdXmtiyyiy8DcDB9dD9PJKS2ejJa6SBuG9sqRkooZOqUn0yH4YhkqONrBO+MBzRNI8tGmjdP5rZITosjke39KxRw8zek1zvAcODRjY+XktVo5DJTxyHdzQT9Qt/GntHBwufTpLfPv8HwKNlIgo+VpMAfKCJzIIEI3KBKJldJ0TRYHnRUX2hAU0U05jkMcsZBcwZAcNs9ld3n0CjbtAypo5oZGhzXsLTkeowqTgprDGVXSqltErdmkAibk+SacS3Ojli906mX51PNygDuVC2K9Mp53Wysd0qmnJYeY4DwNAR8wn9ZY7dcT144GGU/v5zlcWcdJ4ken41qnFYZFxsoI6unljm8DTgtZUcxa3sPT8VcJK2GopXSQSNcPPB81Un8LAZfVRxgA7RtDc99E9nnorXbhG0sgYBrlyEsNpIdbJQXXgnb29fiuKlbHJLJIzduzG83iLu2AtdgwGjCzv2WYrI6u78ha2d4ZGSNeRv5nJWhQ6BdaivWJ5nlXOyePpDtpRspFp7o4KYIQpnsgk+ZBTBCNyhlJ8yHNomiQ7im02xSjnD1UPfb5QWxn94nb1T8MQ1cT8vIfNFJshQOObJT3S51HRcWTRHlEjdwcAkFVSiuXFFgeYJIJpom6McMkY+asVDcXx3F8lScid3M8+hKsoY+FzZY2dWJ2uGrm8mMq5tSXTO7xFGytOLw0ZxVcZ32SOVjaeYyE4wBnCTtFqu91l9+vT3thzzCJx+I9/QLSKmD3p3MIOm09sFR1+dHSU3QGA5w0A3wkwbk9YLtmiyGq3sl0i78FCAcPUhpwAwsyceudVY4nLKuGOI32Wn6EsHXgL84DsOYe35K82jiaz1+Gx1jYpD/Dl8B/HQrsOtxR52Ty8ljYUbKQa/RHDkvAUK8yCTz3QVSxFF+PPKibtxFbbblss3Ul/y49T9fIKiXTiC53Rxb1TBD9iM4H1O5Ua2Jupdlx77LYqvyZyeu3Flzri6Kib7rF5lhy4/wDLy+ir80D8GV7y6TOSSc5TgEDAO3ogTluCBhNSx4QaOgdu4ZBU1ZLhNRs6ModLB6ebe4/JMDIxlPzyHHKcE7knsPVR1Qa2qBy3pQDXpebv9R/pt81SyqNi1kh1VsqpbRZd5rxRMia6CWOofJ+zYxwOT/QKuVUU9TUOmmdlxOfkmTqUS0ccTaeOIR5w8/G7ucbdkrTzVdLhk5dVRfax42/+v5/NKo4sae16P5HLndhPwdNpGsLQ8c2SuyUBkkc5ga3sV0VDZpGPieHsDc5B+n5pwHYxnOvkn9mYVtlffLUQKWpcWD+E53O37j/RWi2ccxaMulI+Bx0Mkfib924/FVN0nj5cAldk5OmOo0YOmFWUVL1BSNYpKqGqp2T0srJYnjLXNdoUFjrGzxgtgqp4mZzytJxn70Er4P2HLIyKTQagDCX13yCo5hOvzT2lJwNTstYkUyfNKBxOAUZmy4zYqpYKY2F7ZdnY1K65pGckEYXHfCuv2+isQcBrxGHlnh2BLcAnC4BsTjOFZbh/htbP93L/ANiq03ZUTyFLB2ONrAcNALjkkJQnlxknRHwMbDZJy7D5IhD0/wAZcTukLrJ/awNB0BJKNCTz7nZRtxJ/SZ1P7Fn8ypjsIeprHCXDTkAYQUdUftSghkmD/9k="></a>
       <p>Dmitry Zviagov<br><span> e-mail: dissaby@gmail.com | phone: +37529 663 11 83</span></p>
     </header>
     <div class="container">
@@ -26,7 +76,7 @@
             <p>I made my own version of 2048. How cool is that!?</p>
           </li>
           <li>
-            <img src="https://lh6.ggpht.com/f_0W8h__3G99CWTjnMjD8BUKm7yp2-wJyApLtTwFoFtlal2ULf_JgHIsOQq2NiYfKOdMlXlMHDKNo5XVZLs=s100">
+            <img rel="prefetch prerender" src="https://lh6.ggpht.com/f_0W8h__3G99CWTjnMjD8BUKm7yp2-wJyApLtTwFoFtlal2ULf_JgHIsOQq2NiYfKOdMlXlMHDKNo5XVZLs=s100">
             <a href="project-webperf.html">Website Performance Optimization</a>
             <p>Hey... this class looks familiar.</p>
           </li>
@@ -45,56 +95,6 @@
       <footer>
         <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
       </footer>
-        <style type="text/css">
-            html {
-                font-size: 100%;
-                overflow-y: scroll;
-                -webkit-tap-highlight-color: rgba(0,0,0,0);
-                -ms-text-size-adjust: 100%;
-                -webkit-text-size-adjust: none;
-                font-family: 'Open Sans', sans-serif; color: #333;
-            }
-            body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; background: #fff; }
-            a { color: #12C; }
-            a:visited { color: #61C; }
-            a:focus { outline: thin dotted; }
-            a:hover, a:active { color: #c00; outline: 0; }
-            b, strong { font-weight: bold; }
-            ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
-            header, footer, .container { max-width: 45em; margin: 0 auto; }
-            header { padding: 0 0.5em; color: #C90B0B; }
-            header img { border-radius: 40px; float: left; width: 70px;}
-            header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
-            header p span { font-size: 0.8em; font-weight: normal;}
-            .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
-                border-bottom: 1px solid #ccc;
-                border-top: 1px solid #ccc;
-            }
-            .content { padding: 1em 1em; }
-            .content li { list-style-type: none; font-size: 1.1em;}
-            li img {width: 100px; float:left; padding-right: 1em; }
-            li p { font-size: 0.9em; font-style: italic; }
-
-            footer {
-                padding: 0 0.5em;
-                border-top: 1px solid #ccc;
-            }
-            footer span { float: right; font-style: italic; }
-            @media only screen and (max-width: 480px) {
-                body { font-size: 12px;}
-                header p { padding-left: 4.5em;}
-            }
-            @media only print {
-                * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
-                a, a:visited { color: #444 !important; text-decoration: underline; }
-                a[href]:after { content: " (" attr(href) ")"; }
-                tr, img { page-break-inside: avoid; }
-                img { max-width: 100% !important; }
-                @page { margin: 0.5cm; }
-                p, h2, h3 { orphans: 3; widows: 3; }
-                h2, h3{ page-break-after: avoid; }
-            }
-        </style>
       <script async>
       (function(w,g){w['GoogleAnalyticsObject']=g;
       w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
